@@ -11,6 +11,9 @@ pipeline {
                     echo "Multiline shell steps works too"
                     ls -lah
                 '''
+                script {
+                        def post = load "JenkinsHelper/stagePost.groovy "
+                }
             }
         }
     }
