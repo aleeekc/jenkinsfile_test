@@ -1,8 +1,12 @@
 def runPost(){
     sh 'echo "TESTTeST"'
-    return {
-            sh 'echo "BYE World"'
-    }
 }
+
+def step(){
+        steps {
+                sh 'echo "STEEEEEEP"'
+            }
+}
+
 
 return this

@@ -1,5 +1,3 @@
-//def post = load "JenkinsHelper/stagePost.groovy "
-
 
 pipeline {
     agent any
@@ -14,6 +12,7 @@ pipeline {
                 script {
                         def post = load "${workspace}/JenkinsHelper/stagePost.groovy"
                         post.runPost()
+                        post.step()
                 }
             }
         }
