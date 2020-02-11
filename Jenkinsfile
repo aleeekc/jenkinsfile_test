@@ -13,6 +13,7 @@ pipeline {
                 '''
                 script {
                         def post = load "${workspace}/JenkinsHelper/stagePost.groovy"
+                        post.runPost()
                 }
             }
         }

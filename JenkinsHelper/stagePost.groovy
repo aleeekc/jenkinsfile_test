@@ -1,8 +1,6 @@
 def runPost(){
     return {
-        post {
             echo ("post")
-        }
     }
 }
 
