@@ -1,7 +1,15 @@
+def generateStage(bar) {
+    return {
+        stage("Build bar") {
+            echo "Building for foo"
+        }
+    }
+}
 
 pipeline {
     agent any
     stages {
+        generateStage()
         stage('Build') {
             steps {
                 sh 'echo "Hello World"'
@@ -12,7 +20,6 @@ pipeline {
                 script {
                         def post = load "${workspace}/JenkinsHelper/stagePost.groovy"
                         post.runPost()
-                        post.step()
                 }
             }
         }
