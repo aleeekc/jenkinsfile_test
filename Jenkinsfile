@@ -12,7 +12,7 @@ pipeline {
                     ls -lah
                 '''
                 script {
-                        def post = load "${workspace}/JenkinsHelper/stagePost.groovy "
+                        def post = load "${workspace}/JenkinsHelper/stagePost.groovy"
                 }
             }
         }
