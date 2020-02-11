@@ -1,20 +1,17 @@
-def post = load "JenkinsHelper\\stagePost.groovy "
+//def post = load "JenkinsHelper\\stagePost.groovy "
 
 
 pipeline {
-    agent none
-
+    agent any
     stages {
-        stage('Build')
-        {
-            steps{
-                    script {
-                            echo ('build')
-                            //post.runPost()
-                    }
+        stage('Build') {
+            steps {
+                sh 'echo "Hello World"'
+                sh '''
+                    echo "Multiline shell steps works too"
+                    ls -lah
+                '''
             }
         }
     }
-
-
 }
