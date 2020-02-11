@@ -5,10 +5,16 @@ pipeline {
     agent any
 
     stages {
-        stage('Build'){
-            steps{echo ('build')}
+        stage('Build')
+        {
+            steps{
+                    script {
+                            echo ('build')
+                            post.runPost()
+                    }
+            }
         }
     }
 
-    post.runPost()
+
 }
