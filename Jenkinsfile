@@ -2,7 +2,7 @@ def post = load "JenkinsHelper\\stagePost.groovy "
 
 
 pipeline {
-    agent any
+    agent none
 
     stages {
         stage('Build')
