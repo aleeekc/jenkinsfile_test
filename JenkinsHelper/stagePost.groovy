@@ -1,6 +1,7 @@
 def runPost(){
+    sh 'echo "TESTTeST"'
     return {
-            echo ("post")
+            sh 'echo "BYE World"'
     }
 }
 
