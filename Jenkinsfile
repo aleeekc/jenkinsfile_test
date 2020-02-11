@@ -10,7 +10,7 @@ pipeline {
             steps{
                     script {
                             echo ('build')
-                            post.runPost()
+                            //post.runPost()
                     }
             }
         }
