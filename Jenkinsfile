@@ -1,4 +1,4 @@
-//def post = load "JenkinsHelper\\stagePost.groovy "
+def post = load "JenkinsHelper/stagePost.groovy "
 
 
 pipeline {
