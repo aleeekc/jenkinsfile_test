@@ -17,6 +17,7 @@ pipeline {
                     echo "Multiline shell steps works too"
                     ls -lah
                 '''
+                sh 'echo "123"'
                 script {
                         def post = load "${workspace}/JenkinsHelper/stagePost.groovy"
                         post.runPost()
